@@ -1,0 +1,49 @@
+# Secrets: generated from Android's saved Wi-Fi networks (contain passwords)
+wpa.conf
+*.nmconnection
+WifiConfigStore*.xml
+system-connections/
+
+# Build outputs (rebuild on the device)
+*.so
+*.o
+rootfs/opt/lsw/drmoff
+rootfs/opt/lsw/lsw-inputd
+rootfs/opt/lsw/absres
+rootfs/opt/lsw/bt-hal-bridge
+build*/
+/mesa*/
+
+# Logs, dumps and device state captured during tests
+*.log
+*.kmsg
+*.out
+*.during
+*.ppm
+run-*.*
+helpers.pid
+kmsg.pid
+runcount
+active
+restore.lock/
+*-state*.txt
+planes.txt
+gdb-stacks.txt
+
+# Downloads
+*.apk
+*.tgz
+*.tar*
+*.img
+
+# Editor and OS clutter
+.DS_Store
+*.swp
+*~
+.vscode/
+.idea/
+
+# Local device settings (address of your tablet etc.)
+.env
+local.conf
+

@@ -1,0 +1,9 @@
+// Linux mode on the tablet: the KDE session has no logind seat, so polkit treats it as inactive.
+// Let the desktop user mount and eject USB drives. Built-in storage has no device nodes here.
+polkit.addRule(function(action, subject) {
+    if (subject.user == "user" && (action.id.indexOf("org.freedesktop.udisks2.filesystem-mount") == 0 ||
+                                   action.id.indexOf("org.freedesktop.udisks2.filesystem-unmount") == 0 ||
+                                   action.id.indexOf("org.freedesktop.udisks2.eject-media") == 0 ||
+                                   action.id.indexOf("org.freedesktop.udisks2.power-off-drive") == 0))
+        return polkit.Result.YES;
+});

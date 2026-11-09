@@ -1,0 +1,3 @@
+#!/data/data/com.termux/files/usr/bin/sh
+# Termux:Widget shortcut: switch the screen to the native KDE desktop
+su -c "sh /data/adb/modules/lsw_linux_switch/action.sh"

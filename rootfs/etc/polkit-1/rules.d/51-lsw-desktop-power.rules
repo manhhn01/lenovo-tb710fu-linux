@@ -1,0 +1,6 @@
+// Linux mode on the tablet: the KDE session has no logind seat, so polkit treats it as inactive.
+// Let the desktop user change the screen brightness through PowerDevil's helper.
+polkit.addRule(function(action, subject) {
+    if (subject.user == "user" && action.id.indexOf("org.kde.powerdevil.backlighthelper.") == 0)
+        return polkit.Result.YES;
+});

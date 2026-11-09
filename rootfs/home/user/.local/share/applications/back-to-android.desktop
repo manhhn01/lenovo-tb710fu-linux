@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Back to Android
+Comment=End the Linux session and return to Android
+Icon=anbox
+Exec=sh -c 'touch /var/lib/lsw/back-to-android'
+Categories=System;

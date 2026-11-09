@@ -1,0 +1,5 @@
+// Linux mode on the tablet: let the desktop user manage Wi-Fi without a password prompt
+// (the session has no logind seat, so polkit would otherwise treat it as inactive).
+polkit.addRule(function(action, subject) {
+    if (action.id.indexOf("org.freedesktop.NetworkManager.") == 0 && subject.user == "user") return polkit.Result.YES;
+});

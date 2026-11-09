@@ -1,0 +1,35 @@
+# Linux mode on the tablet: the display turns off after 5 min idle, or 10 s after locking.
+# No idle dimming and no suspend (suspend under the Android kernel is untested).
+# Power button and closing the keyboard case: lock the screen.
+[AC][Display]
+DimDisplayWhenIdle=false
+TurnOffDisplayWhenIdle=true
+TurnOffDisplayIdleTimeoutSec=300
+TurnOffDisplayIdleTimeoutWhenLockedSec=10
+
+[AC][SuspendAndShutdown]
+AutoSuspendAction=0
+LidAction=32
+PowerButtonAction=32
+
+[Battery][Display]
+DimDisplayWhenIdle=false
+TurnOffDisplayWhenIdle=true
+TurnOffDisplayIdleTimeoutSec=300
+TurnOffDisplayIdleTimeoutWhenLockedSec=10
+
+[Battery][SuspendAndShutdown]
+AutoSuspendAction=0
+LidAction=32
+PowerButtonAction=32
+
+[LowBattery][Display]
+DimDisplayWhenIdle=false
+TurnOffDisplayWhenIdle=true
+TurnOffDisplayIdleTimeoutSec=300
+TurnOffDisplayIdleTimeoutWhenLockedSec=10
+
+[LowBattery][SuspendAndShutdown]
+AutoSuspendAction=0
+LidAction=32
+PowerButtonAction=32

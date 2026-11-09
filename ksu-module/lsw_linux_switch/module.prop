@@ -1,0 +1,6 @@
+id=lsw_linux_switch
+name=Linux switch (KDE)
+version=1.0
+versionCode=1
+author=tb710fu-linux contributors
+description=Action button: switch the screen to the native KDE desktop (Ubuntu chroot). Back to Android: "Back to Android" in KDE, or Vol Up + Vol Down.
